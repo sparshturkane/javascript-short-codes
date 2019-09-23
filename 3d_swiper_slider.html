@@ -27,8 +27,8 @@
         }
 
         .swiper-container {
-            width: 300px;
-            height: 250px;
+            width: 250px;
+            height: 208px;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -65,16 +65,31 @@
         var swiper = new Swiper('.swiper-container', {
             effect: 'cube',
             grabCursor: true,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                waitForTransition: false
+            },
             cubeEffect: {
                 shadow: true,
                 slideShadows: true,
                 shadowOffset: 20,
                 shadowScale: 0.94,
             },
-            pagination: {
-                el: '.swiper-pagination',
-            },
+            // pagination: {
+            //     el: '.swiper-pagination',
+            // },
         });
+
+        // setTimeout(function () {
+        //     console.log('start');
+        //     swiper.autoplay.start();
+        // }, 2000)
+
+        // setTimeout(function () {
+        //     console.log('end');
+        //     swiper.autoplay.stop();
+        // }, 5100)
     </script>
 </body>
 
